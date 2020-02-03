@@ -54,7 +54,6 @@ C:\DatingApp\DatingApp.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sql
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.csprojAssemblyReference.cache
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\staticwebassets\DatingApp.API.StaticWebAssets.Manifest.cache
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\staticwebassets\DatingApp.API.StaticWebAssets.xml
-C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.MvcApplicationPartsAssemblyInfo.cache
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.AssemblyInfoInputs.cache
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.AssemblyInfo.cs
 C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.RazorTargetAssemblyInfo.cache
@@ -69,3 +68,4 @@ C:\DatingApp\DatingApp.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.J
 C:\DatingApp\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\DatingApp\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\DatingApp\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\DatingApp\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.MvcApplicationPartsAssemblyInfo.cache
