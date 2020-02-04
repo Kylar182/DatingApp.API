@@ -10,7 +10,6 @@ namespace DatingApp.API.Models
     public byte[] PasswordHash { get; set; }
     public byte[] PasswordSalt { get; set; }
 
-
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public Gender Gender { get; set; }

@@ -1,5 +1,7 @@
 using System;
 using System.Threading.Tasks;
+using DatingApp.API.Dtos;
+using DatingApp.API.Helpers;
 using DatingApp.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,13 +43,31 @@ namespace DatingApp.API.Data
       return true;
     }
 
-    public async Task<User> Register(User user, string password)
+    public async Task<User> Register(UserForRegisterDTO vm)
     {
       byte[] passwordHash, passwordSalt;
-      CreatePasswordHash(password, out passwordHash, out passwordSalt);
+      CreatePasswordHash(vm.Password.TrimFix(), out passwordHash, out passwordSalt);
+
+      User user = new User();
 
       user.PasswordHash = passwordHash;
       user.PasswordSalt = passwordSalt;
+
+      DateTime date = DateTime.UtcNow;
+
+      user.FirstName = vm.FirstName.TrimFix();
+      user.LastName = vm.LastName.TrimFix();
+      user.Gender = vm.Gender;
+      user.DateOfBirth = vm.DateOfBirth;
+      user.KnownAs = vm.KnownAs.TrimFix();
+      user.Created = date;
+      user.LastActive = date;
+      user.Introduction = vm.Introduction.TrimFix();
+      user.LookingFor = vm.LookingFor;
+      user.Interests = vm.Interests.TrimFix();
+      user.City = vm.City.TrimFix();
+      user.StateProv = vm.StateProv.TrimFix();
+      user.CountryId = vm.CountryId.TrimFix();
 
       await _context.Users.AddAsync(user);
       await _context.SaveChangesAsync();

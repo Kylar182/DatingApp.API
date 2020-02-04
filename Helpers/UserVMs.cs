@@ -12,7 +12,21 @@ namespace DatingApp.API.Helpers
       {
         UserDTO userDTO = new UserDTO()
         {
-          Username = usr.Username
+          Username = usr.Username,
+          FirstName = usr.FirstName,
+          LastName = usr.LastName,
+          Gender = usr.Gender,
+          DateOfBirth = usr.DateOfBirth,
+          KnownAs = usr.KnownAs,
+          Created = usr.Created,
+          LastActive = usr.LastActive,
+          Introduction = usr.Introduction,
+          LookingFor = usr.LookingFor,
+          Interests = usr.Interests,
+          City = usr.City,
+          StateProv = usr.StateProv,
+          CountryId = usr.CountryId,
+          Photos = usr.Photos
         };
 
         return userDTO; 
@@ -30,7 +44,21 @@ namespace DatingApp.API.Helpers
         {
           UserDTO userDTO = new UserDTO()
           {
-            Username = usr.Username
+            Username = usr.Username,
+            FirstName = usr.FirstName,
+            LastName = usr.LastName,
+            Gender = usr.Gender,
+            DateOfBirth = usr.DateOfBirth,
+            KnownAs = usr.KnownAs,
+            Created = usr.Created,
+            LastActive = usr.LastActive,
+            Introduction = usr.Introduction,
+            LookingFor = usr.LookingFor,
+            Interests = usr.Interests,
+            City = usr.City,
+            StateProv = usr.StateProv,
+            CountryId = usr.CountryId,
+            Photos = usr.Photos
           };
 
           userDTOs.Add(userDTO);
