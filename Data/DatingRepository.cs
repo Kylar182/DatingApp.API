@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatingApp.API.Data
 {
-  public class DatingRepository : IDatingRepository
+    public class DatingRepository : IDatingRepository
   {
     private readonly DataContext _context;
     public DatingRepository(DataContext context)
@@ -32,6 +32,7 @@ namespace DatingApp.API.Data
     public async Task<IEnumerable<User>> GetUsers()
     {
       var users = await _context.Users.Include(p => p.Photos).ToListAsync();
+
       return users;
     }
 

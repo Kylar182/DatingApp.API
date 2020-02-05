@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,6 +35,16 @@ namespace DatingApp.API.Helpers
       int numofRecords = pageSize > 1000 ? 1000 : pageSize;
       int skippedRecords = (pageNumber - 1) * numofRecords;
       return await query.Skip(skippedRecords).Take(pageSize).ToListAsync<T>();
+    }
+
+    public static Int32 GetAge(this DateTime dateOfBirth)
+    {
+        var today = DateTime.UtcNow.Date;
+
+        var a = (today.Year * 100 + today.Month) * 100 + today.Day;
+        var b = (dateOfBirth.Year * 100 + dateOfBirth.Month) * 100 + dateOfBirth.Day;
+
+        return (a - b) / 10000;
     }
   }
 }

@@ -57,7 +57,7 @@ namespace DatingApp.API.Controllers
       else 
         return BadRequest("Username cannot be null");
 
-      var userFromRepo = await _repo.Login(usr.Username, usr.Password);
+      User userFromRepo = await _repo.Login(usr.Username, usr.Password);
 
       if (userFromRepo == null)
         return Unauthorized();

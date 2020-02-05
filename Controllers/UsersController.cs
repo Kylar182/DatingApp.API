@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using DatingApp.API.Data;
-using DatingApp.API.Dtos;
-using DatingApp.API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using DatingApp.API.Dtos;
 
 namespace DatingApp.API.Controllers
 {
@@ -28,21 +27,17 @@ namespace DatingApp.API.Controllers
     {
       var users = await _repo.GetUsers();
 
-      var userDTOs = new List<UserDTO>();
-
-      foreach(var user in users)
-      {
-        userDTOs.Add(user.UserToVM());
-      }
+      IEnumerable<UserForListDTO> userDTOs = UserForListDTO.BuildList(users);
 
       return Ok(userDTOs);
     }
 
     [HttpGet("{id}")]
-		public async Task<IActionResult> GetValue(int id)
+		public async Task<IActionResult> GetUser(int id)
 		{
 			var user = await _repo.GetUser(id);
-      return Ok(user.UserToVM());
+
+      return Ok(new UserDTO(user));
 		}
   }
 }
