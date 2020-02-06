@@ -14,7 +14,7 @@
       "Interests": "Fugiat consequat elit velit ullamco nisi qui cillum.",
       "City": "Efland",
       "StateProv": "Illinois",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/women/3.jpg",
@@ -38,7 +38,7 @@
       "Interests": "Fugiat consequat elit velit ullamco nisi qui cillum.",
       "City": "Deseret",
       "StateProv": "Illinois",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/women/49.jpg",
@@ -62,7 +62,7 @@
       "Interests": "Fugiat consequat elit velit ullamco nisi qui cillum.",
       "City": "Hannasville",
       "StateProv": "Tennessee",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/women/24.jpg",
@@ -86,7 +86,7 @@
       "Interests": "In dolor ex laboris ad sint.",
       "City": "Sutton",
       "StateProv": "Ohio",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/women/74.jpg",
@@ -110,7 +110,7 @@
       "Interests": "Cillum duis veniam quis eu enim consequat reprehenderit occaecat pariatur minim ipsum.",
       "City": "Bayview",
       "StateProv": "California",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/women/33.jpg",
@@ -134,7 +134,7 @@
       "Interests": "Lorem aute Lorem voluptate mollit.",
       "City": "Davenport",
       "StateProv": "Iowa",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/men/90.jpg",
@@ -158,7 +158,7 @@
       "Interests": "Reprehenderit fugiat Lorem consectetur fugiat minim nulla magna commodo anim esse eu consectetur.",
       "City": "Inkerman",
       "StateProv": "Wisconsin",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/men/96.jpg",
@@ -182,7 +182,7 @@
       "Interests": "Velit aute elit elit pariatur amet adipisicing sint eiusmod sunt eu ex voluptate ad.",
       "City": "Providence",
       "StateProv": "Rhode Island",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/men/4.jpg",
@@ -206,7 +206,7 @@
       "Interests": "In non sint ea do veniam sunt duis quis mollit.",
       "City": "Bynum",
       "StateProv": "Texas",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/men/76.jpg",
@@ -230,7 +230,7 @@
       "Interests": "Sit ea id excepteur adipisicing ea excepteur sint ex et amet commodo do voluptate esse.",
       "City": "Cavalero",
       "StateProv": "Washington",
-      "CountryId": "840",
+      "Country": 1,
       "Photos": [
         {
           "url": "https://randomuser.me/api/portraits/men/14.jpg",

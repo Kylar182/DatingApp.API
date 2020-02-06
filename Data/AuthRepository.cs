@@ -67,7 +67,7 @@ namespace DatingApp.API.Data
       user.Interests = vm.Interests.TrimFix();
       user.City = vm.City.TrimFix();
       user.StateProv = vm.StateProv.TrimFix();
-      user.CountryId = vm.CountryId.TrimFix();
+      user.Country = vm.Country;
 
       await _context.Users.AddAsync(user);
       await _context.SaveChangesAsync();

@@ -23,6 +23,6 @@ namespace DatingApp.API.Dtos
     public string Interests { get; set; }
     public string City { get; set; }
     public string StateProv { get; set; }
-    public string CountryId { get; set; }
+    public Country Country { get; set; }
   }
 }

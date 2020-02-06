@@ -53,8 +53,8 @@ namespace DatingApp.API.Migrations
                     b.Property<string>("City")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CountryId")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Country")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("TEXT");
