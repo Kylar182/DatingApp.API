@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using DatingApp.API.Helpers;
 using DatingApp.API.Models;
-using System.Linq;
 
 namespace DatingApp.API.Dtos
 {
-  public class UserDTO
+    public class UserDTO
   {
     public int Id { get; set; }
     public string Username { get; set; }
