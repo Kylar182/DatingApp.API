@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using DatingApp.API.Dtos;
 using AutoMapper;
 using System.Security.Claims;
-using DatingApp.API.Models;
 using System;
 
 namespace DatingApp.API.Controllers
