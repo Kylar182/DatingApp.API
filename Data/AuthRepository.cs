@@ -50,6 +50,7 @@ namespace DatingApp.API.Data
 
       User user = new User();
 
+      user.Username = vm.Username;
       user.PasswordHash = passwordHash;
       user.PasswordSalt = passwordSalt;
 
