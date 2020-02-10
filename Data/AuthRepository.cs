@@ -62,9 +62,6 @@ namespace DatingApp.API.Data
       user.KnownAs = vm.KnownAs.TrimFix();
       user.Created = date;
       user.LastActive = date;
-      user.Introduction = vm.Introduction.TrimFix();
-      user.LookingFor = vm.LookingFor;
-      user.Interests = vm.Interests.TrimFix();
       user.City = vm.City.TrimFix();
       user.StateProv = vm.StateProv.TrimFix();
       user.Country = vm.Country;

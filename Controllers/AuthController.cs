@@ -33,6 +33,11 @@ namespace DatingApp.API.Controllers
     public async Task<IActionResult> Register(UserForRegisterDTO usr)
     {
       usr.Username = usr.Username.TrimFix();
+      usr.FirstName = usr.FirstName.TrimFix();
+      usr.LastName = usr.LastName.TrimFix();
+      usr.KnownAs = usr.KnownAs.TrimFix();
+      usr.City = usr.City.TrimFix();
+      usr.StateProv = usr.StateProv.TrimFix();
       if (usr.Username != null)
         usr.Username = usr.Username.ToLower();
       else 
