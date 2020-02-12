@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace DatingApp.API.Helpers
 {
@@ -22,7 +23,9 @@ namespace DatingApp.API.Helpers
     {
       var paginationHeader = new PaginationHeader(currentPage, itemsPerPage, totalItems, 
               totalPages);
-      response.Headers.Add("Pagination", JsonConvert.SerializeObject(paginationHeader));
+      var camelCaseFormatter = new  JsonSerializerSettings();
+      camelCaseFormatter.ContractResolver = new CamelCasePropertyNamesContractResolver();
+      response.Headers.Add("Pagination", JsonConvert.SerializeObject(paginationHeader, camelCaseFormatter));
       response.Headers.Add("Access-Control-Expose-Headers", "Pagination");
     }
 
