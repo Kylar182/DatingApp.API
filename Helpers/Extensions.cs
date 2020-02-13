@@ -59,5 +59,19 @@ namespace DatingApp.API.Helpers
 
         return (a - b) / 10000;
     }
+
+    public static DateTime GetMinDate(this Int32 Max)
+    {
+        var minDate = DateTime.UtcNow.Date.AddYears(-Max -1);           
+
+        return minDate;
+    }
+
+    public static DateTime GetMaxDate(this Int32 Min)
+    {
+        var maxDate = DateTime.UtcNow.Date.AddYears(-Min);           
+
+        return maxDate;
+    }
   }
 }
