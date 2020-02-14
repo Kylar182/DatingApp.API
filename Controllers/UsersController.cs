@@ -35,9 +35,10 @@ namespace DatingApp.API.Controllers
       var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
       var user = await _repo.GetUser(userId);
 
-      userParams.UserId = userId;
-      
+      userParams.UserId = userId;      
       userParams.Gender = userParams.Gender ?? user.LookingFor;
+      userParams.Country = userParams.Country ?? user.Country;
+      userParams.OrderBy = userParams.OrderBy ?? false;
 
       var users = await _repo.GetUsers(userParams);
 

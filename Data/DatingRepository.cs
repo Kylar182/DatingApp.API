@@ -50,7 +50,14 @@ namespace DatingApp.API.Data
                                   .Where(u => u.Id != userParams.UserId
                                   && u.Gender == userParams.Gender
                                   && u.DateOfBirth >= userParams.MaxAge.GetMinDate()
-                                  && u.DateOfBirth <= userParams.MinAge.GetMaxDate()).AsQueryable();
+                                  && u.DateOfBirth <= userParams.MinAge.GetMaxDate()
+                                  && u.Country == userParams.Country)
+                                  .OrderByDescending(u => u.LastActive).AsQueryable();
+                                  
+      if(userParams.OrderBy == true)
+      {
+        users = users.OrderByDescending(u => u.Created);
+      }
 
       return await PageList<User>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
     }
