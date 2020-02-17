@@ -56,23 +56,29 @@ namespace DatingApp.API.Data
                                   .Where(u => u.Id != userParams.UserId
                                   && u.Gender == userParams.Gender
                                   && u.DateOfBirth >= userParams.MaxAge.GetMinDate()
-                                  && u.DateOfBirth <= userParams.MinAge.GetMaxDate()
-                                  && u.Country == userParams.Country)
+                                  && u.DateOfBirth <= userParams.MinAge.GetMaxDate())
                                   .OrderByDescending(u => u.LastActive).AsQueryable();
 
       if (userParams.Likers)
       {
         var userLikers = await GetUserLikes(userParams.UserId, userParams.Likers);
         users = users.Where(u => userLikers.Contains(u.Id));
+        userParams.Country = null;
       }
 
       if (userParams.Likees)
       {
-        var userLikees = await GetUserLikes(userParams.UserId, userParams.Likees);
+        var userLikees = await GetUserLikes(userParams.UserId, userParams.Likers);
         users = users.Where(u => userLikees.Contains(u.Id));
+        userParams.Country = null;
       }
-                                  
-      if(userParams.OrderBy == true)
+
+      if (userParams.Country != null)
+      {
+        users = users.Where(u => u.Country == userParams.Country.Value);
+      }
+
+      if (userParams.OrderBy == true)
       {
         users = users.OrderByDescending(u => u.Created);
       }
